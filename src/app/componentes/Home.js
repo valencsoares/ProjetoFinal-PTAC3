@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import styles from "./home.module.css";
 import ErroNoFetch from "./ErroNoFetch";
+import Carregar from "./Carregar";
 
 export default function Home() {
     const [deuErro, setDeuErro] = useState(false)
@@ -24,6 +25,10 @@ export default function Home() {
 
     if (deuErro == true){
         return <ErroNoFetch/>
+    }
+
+    if (listaPelucias[0] == null){
+        return <Carregar/>
     }
 
     return (
