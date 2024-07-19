@@ -5,6 +5,7 @@ import Image from "next/image";
 import styles from "./home.module.css";
 import ErroNoFetch from "./ErroNoFetch";
 import Carregar from "./Carregar";
+import Link from "next/link";
 
 export default function Home() {
     const [deuErro, setDeuErro] = useState(false)
@@ -41,6 +42,11 @@ export default function Home() {
                         <p className={styles.texto}>Price: {p.preco}</p>
                         <p className={styles.texto}>{p.franquia}</p>
                         <p className={styles.texto}>{p.marca}</p>
+                        <Link href={"/pelucias/" + p.id}>
+                            <div>
+                                <button className={styles.botao}>Ver mais</button>
+                            </div>
+                        </Link>
                     </div>
                 ))}
             </div>
