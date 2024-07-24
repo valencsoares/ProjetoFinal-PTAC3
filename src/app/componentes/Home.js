@@ -36,13 +36,11 @@ export default function Home() {
         <main>
             <div className={styles.container}>
                 {listaPelucias.map((p) => (
-                    <div key={p.id} className={styles.card}>
+                    <div className={styles.card}>
                         <Image width={220} height={250} src={p.imagem} />
-                        <p className={styles.texto}>{p.titulo}</p>
-                        <p className={styles.texto}>Price: {p.preco}</p>
+                        <p className={styles.textoTitulo}>{p.titulo}</p>
                         <p className={styles.texto}>{p.franquia}</p>
-                        <p className={styles.texto}>{p.marca}</p>
-                        <Link href={"/pelucias/" + p.id}>
+                        <Link href={"/pelucia/" + p.id}>
                             <div>
                                 <button className={styles.botao}>Ver mais</button>
                             </div>

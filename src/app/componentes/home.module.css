@@ -6,18 +6,24 @@
 
 .card {
   max-width: 15rem;
-  height: 29rem;
+  height: 24rem;
   padding: 16px;
   border: 1px solid #ffffff;
   border-radius: 4%;
   margin: 0 1% 3% 1%;
   text-align: center;
   white-space: nowrap;
+  background-color: #fff;
   box-shadow: 0 1px 5px rgb(199, 199, 199);
 }
 
 .texto {
     overflow: auto;
+}
+
+.textoTitulo {
+    overflow: auto;
+    font-weight: bold;
 }
 
 .listaCard {
@@ -38,7 +44,7 @@
 }
 
 .botao {
-    background-color: #ae00ff;
+    background-color: #0095ff;
     color: #fff; 
     border: none; 
     padding: 10px 20px; 
@@ -48,5 +54,64 @@
 }
 
 .botao:hover {
-    background-color: #7700b3; 
+    background-color: #0071b3; 
+}
+
+.containerProd {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 5%;
+}
+
+.cardProd {
+    display: flex;
+    align-items: center;
+    padding: 20px; 
+    border: 1px solid #ffa749;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px #ffa749;
+    width: 80%;
+    height: 33rem;
+    background-color: #fff;
+}
+
+.coluna {
+    flex: 1;
+}
+
+.colunaText {
+    flex: 1;
+    margin-left: 3%;
+}
+
+.img {
+    object-fit: cover;
+    border-radius: 5px 5px 0 0;
+}
+
+.titulo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.marca {
+    font-size: 1rem;
+    color: #777;
+}
+
+.preco {
+    font-size: 1.25rem;
+    color: #333;
+    margin-top: 10%;
+}
+
+.desconto {
+    font-size: 14px;
+    color: #ff0000;
+}
+
+.detalhes {
+    font-size: 1rem;
+    color: #555;
 }

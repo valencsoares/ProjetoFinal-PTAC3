@@ -6,7 +6,7 @@ export async function GET(req){
     let objeto = null;
     listaDePelucias.forEach((obj) => {
         if(obj.id == id){
-            objeto == obj
+            objeto = obj
         }
     });
     return NextResponse.json(objeto)
