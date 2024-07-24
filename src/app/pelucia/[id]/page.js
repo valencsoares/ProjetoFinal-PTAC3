@@ -1,6 +1,5 @@
 import Image from "next/image";
 import styles from "../../componentes/home.module.css"
-import Navbar from "../../componentes/Navbar"
 
 export default async function Pelucia({ params }) {
     const resposta = await fetch("http://localhost:3000/api/" + params.id, { next: { revalidate: 1 } });
@@ -8,7 +7,6 @@ export default async function Pelucia({ params }) {
 
     return (
         <main>
-            <Navbar />
             <div className={styles.containerProd}>
                 <div className={styles.cardProd}>
                     <div className={styles.coluna}>
