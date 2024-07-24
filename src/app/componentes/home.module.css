@@ -123,6 +123,14 @@
     justify-content: space-between;
 }
 
+.pesquisar {
+    width: 20%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
 .botao3 {
   background-color: #4297ff;
   color: #fff;
