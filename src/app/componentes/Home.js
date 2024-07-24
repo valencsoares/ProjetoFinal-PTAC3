@@ -24,9 +24,27 @@ export default function Home() {
         pegarPelucia()
     }, [])
 
-    if (deuErro == true){
-        return <ErroNoFetch/>
+    const ordenaAz = () => {
+        const listaAux = [...listaPelucias].sort((a, b) => a.titulo.localeCompare(b.titulo));
+        setListaPelucias(listaAux)
     }
+    const ordenaZa = () => {
+        const listaAux = [...listaPelucias].sort((a, b) => b.titulo.localeCompare(a.titulo));
+        setListaPelucias(listaAux)
+    }
+    const precoCrescente = () => {
+        const listaAux = [...listaPelucias].sort((a, b) => a.preco - b.preco);
+        setListaPelucias(listaAux)
+    }
+    const precoDecrescente = () => {
+        const listaAux = [...listaPelucias].sort((a, b) => b.preco - a.preco);
+        setListaPelucias(listaAux)
+    }
+    const ordenaFranquiaAz = () => {
+        const listaAux = [...listaPelucias].sort((a, b) => a.franquia.localeCompare(b.franquia));
+        setListaPelucias(listaAux)
+    }
+
 
     if (listaPelucias[0] == null){
         return <Carregar/>
@@ -34,6 +52,12 @@ export default function Home() {
 
     return (
         <main>
+            <div className={styles.input}>
+                <button className={styles.botao3} onClick={ordenaAz}> Organize pelo título de A a Z </button>
+                <button className={styles.botao3} onClick={ordenaZa}> Organize pelo título de Z a A </button>
+                <button className={styles.botao3} onClick={ordenaFranquiaAz}> Organize pela franquia </button>
+                <button className={styles.botao3} onClick={precoCrescente}> Filtar por menor preço </button>
+                <button className={styles.botao3} onClick={precoDecrescente}> Filtar por maior preço </button>
             <div className={styles.container}>
                 {listaPelucias.map((p) => (
                     <div className={styles.card}>
