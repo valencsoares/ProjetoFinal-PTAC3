@@ -112,6 +112,25 @@
     color: #555;
 }
 
+.botao2 {
+    background-color: #fff; 
+    border: none; 
+    cursor: pointer;
+}
+
+.cabecalho {
+    display: inline-flex;
+    width: 100%;
+    height: 10%;
+    background-color:#fff;
+    z-index: 1;
+    top: 0;
+    box-shadow: 0 3px 3px rgb(216, 216, 216);
+    align-items: center;
+    position: fixed;
+    justify-content: space-between;
+    margin: 0;
+}
 
 .input {
     margin-top: 6%;

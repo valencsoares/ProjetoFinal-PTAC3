@@ -6,6 +6,7 @@ import styles from "./home.module.css";
 import ErroNoFetch from "./ErroNoFetch";
 import Carregar from "./Carregar";
 import Link from "next/link";
+import Navbar from "./Navbar"
 
 export default function Home() {
     const [deuErro, setDeuErro] = useState(false)
@@ -71,6 +72,7 @@ export default function Home() {
 
     return (
         <main>
+            <Navbar/>
             <div className={styles.input}>
                 <input className={styles.pesquisar} type="text" value={pesquisaBarra} placeholder="Pesquise um produto" onChange={(event) => pesquisa(event.target.value)}/>
                 <button className={styles.botao3} onClick={ordenaAz}> Organize pelo título de A a Z </button>
